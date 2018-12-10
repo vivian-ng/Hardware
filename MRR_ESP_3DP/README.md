@@ -3,6 +3,8 @@
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
+** Work in progress! Do not attempt production using this schematic! **
+
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
 - 12V or 24V input power supply
