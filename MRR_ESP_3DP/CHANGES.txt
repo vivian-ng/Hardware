@@ -1,6 +1,11 @@
 Changes
 -------
 
+v0.4
+----
+- Renamed power inputs to VIN and VBED.
+- Changed reverse current protection diodes to parallel instead of series.
+
 v0.3
 ----
 - Initial release on Github.
