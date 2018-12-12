@@ -1,0 +1,19 @@
+Changes
+-------
+
+v0.3
+----
+- Initial release on Github.
+- Changed to use 5.08mm pitch terminals instead of 7.62mm pitch terminals to reduce footprint.
+- Added AUX1 connector.
+
+v0.2
+----
+- Overhaul of v0.1 to use ESP32-WROOM-32 module instead of development boards.
+- Added design consideration to fit within 100mm x 100mm of PCB area.
+- Support for 4 stepper drivers, single hot end, single heat bed, single part cooling fan.
+- Pinout based on current (2018-11-25) pins_ESP32.h of Marlin firmware (bugsfix-2.0.x branch).
+
+v0.1
+----
+- Based on 2 x LOLIN32 development boards, with one running Marlin firmware, and another running ESP3D to provide user interface.
