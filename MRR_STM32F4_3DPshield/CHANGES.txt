@@ -1,0 +1,9 @@
+Changes
+-------
+
+v0.1
+----
+- Development of prototype.
+- Based on STM32F407VET6 development board available from Aliexpress.
+- Pinout based on current (2018-12-8) pins_STM32F4.h in Marlin firmware (bugsfix-2.0.x branch).
+- 5 stepper drivers (X, Y, Z, E0, E1), two hot ends (E0, E1), two part cooling fans, single heat bed.
