@@ -3,7 +3,7 @@
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
-** Work in progress! Do not attempt production using this schematic! **
+** Work in progress! Do not attempt production using this schematic! **</br>
 ** Current version: v0.4 **
 
 Features:
