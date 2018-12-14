@@ -4,6 +4,7 @@
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
 ** Work in progress! Do not attempt production using this schematic! **
+** Current version: v0.4 **
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
@@ -14,5 +15,9 @@ Features:
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
 - A jumper for selecting Vout (either 3.3V or 5V)
 - A jumper for selecting the source for 5V (either from the input power supply, or from USB)
+
+TODO:
+- Add support for TMC2130 and TMC2208 drivers which can be enabled by configuring jumpers
+- Use MOSFET with smaller footprint for part cooling fan.
 
 Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
