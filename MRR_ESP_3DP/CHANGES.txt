@@ -1,6 +1,16 @@
 Changes
 -------
 
+v0.5
+----
+- Added jumpers to allow TMC drivers to be used.
+  - Connect or disconnect MS1, MS2, MS3 jumpers for normal microstepping control (A4988, etc.).
+  - Connect RST to SLP for normal drivers like A4988.
+  - Connect MS1, MS2, MS3, RST jumpers to TMC side for TMC2130.
+  - Connect RST jumper to TMC side for TMC2208; MS1 and MS2 can still be used for microstepping.
+  - Connect TMC_SEL jumper to SPI for TMC2130, and UART for TMC2208.
+  - When using TMC2130 SPI, connect X, Y, Z, or E0 pin on CS_PIN row to the pin that is to be used for CS on the ESP32 breakout row.
+
 v0.4
 ----
 - Renamed power inputs to VIN and VBED.
