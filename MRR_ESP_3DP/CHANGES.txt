@@ -1,5 +1,10 @@
 Changes
 -------
+v0.6
+----
+- Changed capacitors for motor drivers to 100uF.
+- Changed bed mosfet to IRLS3034PBF, which has a lower on-resistance at 4.5V.
+- Used 74HCT02 to drive mosfets.
 
 v0.5
 ----
