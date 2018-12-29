@@ -1,5 +1,5 @@
 # MRR ESP 3DP
-# 3D printer control board based on ESP32
+## 3D printer control board based on ESP32
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
@@ -19,6 +19,7 @@ Features:
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
   - Set RST jumper to TMC and TMC_SEL jumper to UART to enable TMC2208 UART mode
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
+- Physical size of 99mm by 99mm. Mounting holes are 3.5mm in diameter, with centers 3.75mm from the edges.
 
 # Selection Jumpers
 
@@ -54,6 +55,9 @@ In addition, [Luc](https://github.com/luc-github) has been working on a Marlin f
 - To flash firmware by directly connecting to TX/RX pins, you will need to hold down the "BOOT" button when flashing firmware to pull GPIO0 to GND.
 - "EN" button can be used to reset the board.
 
+# Pins
+
+To be added
 
 # License
 Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
