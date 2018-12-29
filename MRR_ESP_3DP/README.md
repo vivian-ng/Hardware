@@ -3,14 +3,14 @@
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
-** Work in progress! Do not attempt production using this schematic! **</br>
+** Work in progress! Do not attempt production using this schematic! **<br>
 ** Current version: v0.6 **
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
 - 12V or 24V input power supply
 - Separate power supply for the heat bed
-- X, Y, and Z min endstops
+- X, Y, and Z min endstops (v0.6 and earlier: no filters; v0.7 onwards will add a capacitor as a filter; please use endstops, such as the ones designed by Makerbot, that has their own debouncing circuits)
 - Allows the use of a Z-axis probe, such as an inductive sensor, running on the input supply voltage (12V or 24V)
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
 - A jumper for selecting Vout (either 3.3V or 5V)
@@ -20,5 +20,40 @@ Features:
   - Set RST jumper to TMC and TMC_SEL jumper to UART to enable TMC2208 UART mode
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
 
+# Selection Jumpers
 
+There are jumpers for:
+- 5V_SEL: Selection of input power to use. Either from external power supply (PWR), or from USB. Set the jumper to USB when connecting to a computer for flashing firmware.
+- Vout_SEL: Set the Vout pins voltage to either 5V or 3.3V.
+- TMC_SEL: When using TMC drivers (TMC2130 or TMC2208). Set to SPI when using TMC2130 in SPI mode, or UART when using TMC2208 in UART mode.
+- PD_UART: These two jumpers (TX, RX) must be enabled when using TMC2208 in UART mode.
+- MS1, MS2, MS3: Enable/disable these jumpers for microstepping. When using TMC2130 in SPI mode, enable the other side (SPI) of the jumper.
+- RST/TMC: Enable RST side when not using SPI or UART modes with TMC drivers. Enable TMC side when using TMC2130 in SPI mode or TMC2208 in UART mode.
+
+## TMC2130 in SPI mode
+
+- Set the motor jumpers to SPI instead of MS1/MS2/MS3, and to TMC instead of RST.
+- Set "TMC_SEL" jumper to TMC.
+- Connect the respective "CS_PIN" (X, Y, Z, E) to the pin you want to use for CS of that motor. You will need to use a female-to-female jumper cable.
+
+## TMC2208 in UART mode
+
+- Set motor jumper to TMC instead of RST. MS1/MS2 can be used for microstepping.
+- Set "TMC_SEL" jumper to UART.
+- Enable "PD_UART" (TX, RX) jumpers.
+
+
+# Firmware
+
+Marlin 2.0 has added support for ESP32. This board was based on the initial pins definition used. <br>
+In addition, [Luc](https://github.com/luc-github) has been working on a Marlin fork which incorporates part of his ESP3D webUI into Marlin itself.
+
+## Flashing firmware
+
+- You should be able to flash firmware through the USB port. For those familiar with ESP8266, the CH340 chip has been configured to use the "nodemcu" method of enabling the ESP32 for flashing.
+- To flash firmware by directly connecting to TX/RX pins, you will need to hold down the "BOOT" button when flashing firmware to pull GPIO0 to GND.
+- "EN" button can be used to reset the board.
+
+
+# License
 Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
