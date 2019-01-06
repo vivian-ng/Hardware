@@ -15,7 +15,7 @@ Features:
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
 - A jumper for selecting Vout (either 3.3V or 5V)
 - A jumper for selecting the source for 5V (either from the input power supply, or from USB)
-- Add support for TMC2130 and TMC2208 drivers which can be enabled by configuring jumpers
+- Add support for TMC2130 and TMC2208 drivers which can be enabled by configuring jumpers (**Untested!!!**)
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
   - Set RST jumper to TMC, enable PD_UART (TX, RX) jumpers, and TMC_SEL jumper to UART to enable TMC2208 UART mode
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
