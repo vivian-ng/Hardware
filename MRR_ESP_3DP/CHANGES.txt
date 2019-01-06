@@ -1,5 +1,11 @@
 Changes
 -------
+
+v0.7
+----
+- Added capacitors to endstops for filtering.
+- Changed thermistor resistors to 4.7K (original 47K was mistake).
+
 v0.6
 ----
 - Changed capacitors for motor drivers to 100uF.
