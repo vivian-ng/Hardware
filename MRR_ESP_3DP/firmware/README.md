@@ -4,6 +4,8 @@ MRR ESP 3DP board works with the [Marlin fork](https://github.com/luc-github/Mar
 
 If you are using an external host such as the MKS TFT32 or Octoprint, you can also use Marlin 2.0, which has ESP32 support. However, this does not come with WiFi nor a web UI.
 
+When flashing firmware, use a baud rate of 115200.
+
 # Instructions for setting up WiFi
 
 Once the firmware has been flashed for the first time, there is a need to do an initial setup for the WiFi settings.<br>
