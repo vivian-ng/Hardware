@@ -6,6 +6,8 @@ v0.7
 - Added capacitors to endstops for filtering.
 - Changed thermistor resistors to 4.7K (original 47K was mistake).
 - Removed TMC2208 PD_UART jumpers as the current setup does not have enough sets of TX/RX pins to support at least 2 drivers (X and Y).
+- Removed button for IO0.
+- Renamed "EN" button to "BOOT" button.
 
 v0.6
 ----
