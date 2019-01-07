@@ -53,6 +53,7 @@ In addition, [Luc](https://github.com/luc-github) has been working on a Marlin f
 
 - You should be able to flash firmware through the USB port. Depending on your operating system, you may need to install drivers for the CH340. Please use Google or another search engine to find the right CH340 driver for your operating system.
 - To flash firmware by directly connecting to TX/RX pins, you will need to connect IO0 and IO2 to GND, then reboot (press "BOOT" button) to enter flash mode. After flashing the firmware, disconnect IO0 and IO2 from GND, and press "BOOT" button again to reboot into normal mode.
+- Use a baud rate of 115200.
 
 # Pins
 
