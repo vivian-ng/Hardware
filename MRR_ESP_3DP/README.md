@@ -20,7 +20,7 @@ Features:
   - Set RST jumper to TMC, enable PD_UART (TX, RX) jumpers, and TMC_SEL jumper to UART to enable TMC2208 UART mode (Note: Jumpers for TMC2208 UART mode will be removed in v0.7 as there are not enough pins to support at least 2 drivers (X and Y))
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
 - Physical size of 99mm by 99mm. Mounting holes are 3.5mm in diameter, with centers 3.75mm from the edges.
-- "EN" button can be used to reset the board.
+- "BOOT" button can be used to reset the board.
 
 # Selection Jumpers
 
@@ -52,7 +52,7 @@ In addition, [Luc](https://github.com/luc-github) has been working on a Marlin f
 ## Flashing firmware
 
 - You should be able to flash firmware through the USB port. Depending on your operating system, you may need to install drivers for the CH340. Please use Google or another search engine to find the right CH340 driver for your operating system.
-- To flash firmware by directly connecting to TX/RX pins, you will need to connect IO0 and IO2 to GND, then reboot (press "EN" button) to enter flash mode. After flashing the firmware, disconnect IO0 and IO2 from GND, and press "EN" button again to reboot into normal mode.
+- To flash firmware by directly connecting to TX/RX pins, you will need to connect IO0 and IO2 to GND, then reboot (press "BOOT" button) to enter flash mode. After flashing the firmware, disconnect IO0 and IO2 from GND, and press "BOOT" button again to reboot into normal mode.
 
 # Pins
 
