@@ -8,6 +8,8 @@ v0.7
 - Removed TMC2208 PD_UART jumpers as the current setup does not have enough sets of TX/RX pins to support at least 2 drivers (X and Y).
 - Removed button for IO0.
 - Renamed "EN" button to "BOOT" button.
+- Added capacitors to 3.3V regulator for more stable power.
+- Added 5V regulator to regulate VCC supply to 74HCT02. This is needed because the 74HCT02 can only handle up to 5.5V, and any input voltage fluctuation beyond 5.5V will cause the 74HCT02 to fail, and it will then supply voltage to the MOSFET gates, turning on the MOSFETs and possibly causing a fire.
 
 v0.6
 ----
