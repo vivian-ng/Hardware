@@ -3,9 +3,9 @@
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
-** Work in progress! Do not attempt production using this schematic! **<br>
-** Current version: v0.6 **<br>
-** Warning: There is a design problem with v0.6. The 5V output from the LM2596-5 may exceed 5.5V due to the inductor being used having a current rating much lower than required. A supply voltage of more than 5.5V is beyond the operating range of the 74HCT02. This will cause the 74HCT02 to break down, sending current to the MOSFETs. **
+**Work in progress! Do not attempt production using this schematic!**<br>
+**Current version: v0.6**<br>
+**Warning: There is a design problem with v0.6. The 5V output from the LM2596-5 may exceed 5.5V due to the inductor being used having a current rating much lower than required. A supply voltage of more than 5.5V is beyond the operating range of the 74HCT02. This will cause the 74HCT02 to break down, sending current to the MOSFETs.**
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
@@ -15,7 +15,7 @@ Features:
 - Allows the use of a Z-axis probe, such as an inductive sensor, running on the input supply voltage (12V or 24V)
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
 - A jumper for selecting Vout (either 3.3V or 5V)
-- A jumper for selecting the source for 5V (either from the input power supply, or from USB)
+- A jumper for selecting the source for 5V (either from the input power supply, or from USB/Note: This should be removed in v0.7.)
 - Add support for TMC2130 and TMC2208 drivers which can be enabled by configuring jumpers (**Untested!!!**)
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
   - Set RST jumper to TMC, enable PD_UART (TX, RX) jumpers, and TMC_SEL jumper to UART to enable TMC2208 UART mode (Note: Jumpers for TMC2208 UART mode will be removed in v0.7 as there are not enough pins to support at least 2 drivers (X and Y))
@@ -26,7 +26,7 @@ Features:
 # Selection Jumpers
 
 There are jumpers for:
-- 5V_SEL: Selection of input power to use. Either from external power supply (PWR), or from USB. Set the jumper to USB when connecting to a computer for flashing firmware.
+- 5V_SEL: Selection of input power to use. Either from external power supply (PWR), or from USB. Set the jumper to USB when connecting to a computer for flashing firmware. (Note: This should be removed in v0.7.)
 - Vout_SEL: Set the Vout pins voltage to either 5V or 3.3V.
 - TMC_SEL: When using TMC drivers (TMC2130 or TMC2208). Set to SPI when using TMC2130 in SPI mode, or UART when using TMC2208 in UART mode.
 - PD_UART: These two jumpers (TX, RX) must be enabled when using TMC2208 in UART mode. (to be removed in v0.7)
