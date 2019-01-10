@@ -4,7 +4,8 @@
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
 ** Work in progress! Do not attempt production using this schematic! **<br>
-** Current version: v0.6 **
+** Current version: v0.6 **<br>
+** Warning: There is a design problem with v0.6. The 5V output from the LM2596-5 may exceed 5.5V due to the inductor being used having a current rating much lower than required. A supply voltage of more than 5.5V is beyond the operating range of the 74HCT02. This will cause the 74HCT02 to break down, sending current to the MOSFETs. **
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
