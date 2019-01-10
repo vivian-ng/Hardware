@@ -9,7 +9,9 @@ v0.7
 - Removed button for IO0.
 - Renamed "EN" button to "BOOT" button.
 - Added capacitors to 3.3V regulator for more stable power.
-- Added 5V regulator to regulate VCC supply to 74HCT02. This is needed because the 74HCT02 can only handle up to 5.5V, and any input voltage fluctuation beyond 5.5V will cause the 74HCT02 to fail, and it will then supply voltage to the MOSFET gates, turning on the MOSFETs and possibly causing a fire.
+- Replaced 47uH inductor. The previous version used an inductor rated for 540mA. This version will use an inductor rated for 4A at least.
+- Replaced 74HCT02 with 74HCT125, which can operate with an absolute maximum supply voltage of 7V. This is in case the 5V supply voltage fluctuates; the 74HCT02's max supply voltage of 5.5V offers very little buffer against fluctuations.
+- Replaced 5V_SEL jumper with an OPAMP and P-channel MOSFET instead, to avoid power problems should the user forget to set the jumper correctly. This selection circuit is similar to that being used on the Arduino UNO R3.
 
 v0.6
 ----
