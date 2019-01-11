@@ -9,8 +9,9 @@ v0.7
 - Removed button for IO0.
 - Renamed "EN" button to "BOOT" button.
 - Added capacitors to 3.3V regulator for more stable power.
-- Replaced 47uH inductor. The previous version used an inductor rated for 540mA. This version will use an inductor rated for 4A at least.
-- Replaced 74HCT02 with 74HCT125, which can operate with an absolute maximum supply voltage of 7V. This is in case the 5V supply voltage fluctuates; the 74HCT02's max supply voltage of 5.5V offers very little buffer against fluctuations.
+- Replaced 5V step-down circuit. Uses TPS54340 instead of LM2596 for a smaller footprint. Circuit was designed using TI's Webench. Previous LM2596 circuit was using an underspec inductor (540mA) instead of something over 4.5A. Space freed up will eventually be used in version 2 of the board, which will incorporate I2S.
+- Replaced 74HCT02 with 74HCT126, which is a non-inverting buffer gate. May eventually be switched to I2S in version 2 if I2S can stably run MOSFETs.
+- Added MOSFET enable jumper (MOS_EN). When testing the rest of the board, this jumper can be left open to disable the 74HCT126.
 - Replaced 5V_SEL jumper with an OPAMP and P-channel MOSFET instead, to avoid power problems should the user forget to set the jumper correctly. This selection circuit is similar to that being used on the Arduino UNO R3.
 
 v0.6
