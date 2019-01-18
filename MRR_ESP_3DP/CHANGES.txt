@@ -1,5 +1,10 @@
 Changes
 -------
+v0.8
+----
+- Shifted position of ESP32 to expose the antenna outside the board. Also, reduced the routing of lines under the ESP32 module to prevent interference.
+- Removed 74HCT125; the MOSFETs used can perform adequately well at 3.3V logic without having to translate up to 5V. The footprint freed up will be used to house 74HC595s in version 2 of the board to utilize I2S for motor control.
+- Removed Vout_SEL jumper. Breakout pins will be 3.3V; 5V can be obtained from AUX1.
 
 v0.7
 ----
