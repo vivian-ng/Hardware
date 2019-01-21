@@ -5,6 +5,7 @@ This is a bare-minimum 3D printer control board based on the ESP32 microcontroll
 
 **Work in progress! Do not attempt production using this schematic!**<br>
 **Current version: v0.7**<br>
+Note: I am currently trying to find time to migrate the project from EasyEDA to KiCad. v0.8 is likely to be still on EasyEDA, hopefully the official v1.0 will be on KiCad by the time it is ready so that the files can be more accessible to everyone who wishes to modify them.<br>
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
