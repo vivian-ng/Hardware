@@ -55,6 +55,7 @@ Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
 
 ## Warning
 
+- This product uses high currents which may cause fires. Use with caution.
 - Do not use input voltages higher than 24V. Input current must not exceed 15A.
 - Do not attempt to use more than 15A for the heated bed. While the MOSFET is capable of such currents, the connectors are not. If you need more than 15A, use an external MOSFET.
 - Do not attempt to use more than 5A for the hot end. While the MOSFET is capable of such currents, the connectors are not. If you need more than 5A, use an external MOSFET.
