@@ -5,7 +5,7 @@ This is a bare-minimum 3D printer control board based on the ESP32 microcontroll
 
 **Work in progress! Do not attempt production using this schematic!**<br>
 **Current version: v0.7**<br>
-Note: I am currently trying to find time to migrate the project from EasyEDA to KiCad. v0.8 is likely to be still on EasyEDA, hopefully the official v1.0 will be on KiCad by the time it is ready so that the files can be more accessible to everyone who wishes to modify them.<br>
+Note: v0.8 will be migrated to KiCad so that the files can be more accessible to everyone who wishes to modify them.<br>
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
@@ -62,6 +62,7 @@ Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
 - Do not reverse polarity.
 - The breakout and endstop pins are rated for 3.3V, which is the voltage the ESP32 operates at. Attempting to feed inputs above 3.3V to these pins may damage the board.
 - It is recommended to power the board only via USB (i.e. turn off PSU power supply) when flashing the board.
+- Use the same PSU to power both VIN and VBED; the GND rail on the board is common to board VIN and VBED, and using different PSUs for these power inputs (with different ground levels) may have dangerous effects.
 
 ## Disclaimer
 
