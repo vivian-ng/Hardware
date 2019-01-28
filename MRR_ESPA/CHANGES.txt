@@ -1,5 +1,10 @@
 Changes
 -------
+v0.9
+----
+- TLP785 (SMD-4) optocoupler and voltage divider to drive bed MOSFET so that a separate PSU can be used.
+- 74LVC1G125 (SOT-353) to drive E0 and fan MOSFETs.
+
 v0.8
 ----
 - Renamed as MRR ESPA.
