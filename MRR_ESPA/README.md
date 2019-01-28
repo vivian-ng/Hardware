@@ -1,5 +1,5 @@
-# MRR ESP 3DP
-## 3D printer control board based on ESP32
+# MRR ESPA
+## A basic 3D printer control board based on ESP32
 
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
