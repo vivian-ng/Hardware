@@ -4,8 +4,8 @@
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
 **Work in progress! Do not attempt production using this schematic!**<br>
-**Current version: v0.7**<br>
-Note: v0.8 will be migrated to KiCad so that the files can be more accessible to everyone who wishes to modify them.<br>
+**Current version: v0.8**<br>
+Note: As of v0.8, files have been migrated to KiCad so that the files can be more accessible to everyone who wishes to modify them.<br>
 
 Features:
 - Able to use up to 4 stepper drivers: X, Y, Z, and E0
@@ -14,7 +14,6 @@ Features:
 - X, Y, and Z min endstops (v0.6 and earlier: no filters; v0.7 onwards added a capacitor as a filter; please use endstops, such as the ones designed by Makerbot, that have their own debouncing circuits)
 - Allows the use of a Z-axis probe, such as an inductive sensor, running on the input supply voltage (12V to 24V)
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
-- A jumper for selecting Vout (either 3.3V or 5V) (to be removed in v0.8)
 - Automatic selection of 5V source from either power supply or USB
 - Supports TMC2130 drivers in SPI mode which can be enabled by configuring jumpers (**Untested!!!**)
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
@@ -25,10 +24,8 @@ Features:
 # Selection Jumpers
 
 There are jumpers for:
-- Vout_SEL: Set the Vout pins voltage to either 5V or 3.3V. (to be removed in v0.8)
 - MS1, MS2, MS3: Enable/disable these jumpers for microstepping. When using TMC2130 in SPI mode, enable the other side (SPI) of the jumper.
 - RST/TMC: Enable RST side when not using SPI mode with TMC drivers. Enable TMC side when using TMC2130 in SPI mode.
-- MOS_EN: Leave jumper open to disable any outputs to MOSFETs. (to be removed in v0.8)
 
 ## TMC2130 in SPI mode
 
