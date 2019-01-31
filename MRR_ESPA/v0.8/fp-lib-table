@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name projfp)(type KiCad)(uri ${KIPRJMOD}/MRR_ESP_3DP/projlib/projfp.pretty)(options "")(descr ""))
+)

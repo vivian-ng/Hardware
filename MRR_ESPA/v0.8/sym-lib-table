@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name projsym)(type Legacy)(uri ${KIPRJMOD}/MRR_ESP_3DP/projlib/projsym.lib)(options "")(descr ""))
+  (lib (name MRR_ESP_3DP-rescue)(type Legacy)(uri ${KIPRJMOD}/MRR_ESP_3DP-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,14 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CH340C
+D USB serial converter, UART, SOIC-16
+K USB UART Serial Converter Interface
+F http://www.datasheet5.com/pdf-local-2195953
+$ENDCMP
+#
+$CMP Micro_SD_Card_China
+D Micro SD Card Socket from China
+K connector SD microsd
+$ENDCMP
+#
+#End Doc Library
