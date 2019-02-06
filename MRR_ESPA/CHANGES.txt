@@ -5,7 +5,8 @@ v0.9
 - TLP182 (SMD-4) optocoupler and voltage divider to drive bed MOSFET so that a separate PSU can be used, referencing Little-Driver (https://github.com/Digital-Sqrt/Little-Driver).
 - 74LVC1G125 (SOT-353) to drive E0 and fan MOSFETs.
 - Remove 5V select circuit; switched to using 1N5819 diodes to prevent reverse voltage.
-- Updated 5V1 output; previously connected to cathode of 47uF capacitor, which was a mistake.
+- Amended 5V1 output; previously connected to in series to 47uF capacitor, which was a mistake. It needs to be in parallel.
+- Amended DTR/RTS circuit; previously, IO0 connected to wrong side of S9014, which prevented flashing of firmware via USB.
 
 v0.8
 ----
