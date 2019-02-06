@@ -6,6 +6,14 @@ If you are using an external host such as the MKS TFT32 or Octoprint, you can al
 
 When flashing firmware, use a baud rate of 115200.
 
+Default admin name and password:
+User: admin
+Password: admin
+
+Default general user name and password:
+User: user
+Password: user
+
 # Instructions for setting up WiFi
 
 Once the firmware has been flashed for the first time, there is a need to do an initial setup for the WiFi settings.<br>
