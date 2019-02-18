@@ -14,7 +14,7 @@ Features:
 - X, Y, and Z min endstops
 - Allows the use of a Z-axis probe, such as an inductive sensor, running on the input supply voltage (12V to 24V)
 - AUX1 connector for use with an external host, such as the closed-source MKS TFT32
-- Supports TMC2130 drivers in SPI mode which can be enabled by configuring jumpers (**Untested!!!**)
+- Supports TMC2130 drivers in SPI mode which can be enabled by configuring jumpers (**Untested!!!** Hardware option is available, pending software support in Marlin.)
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
 - Physical size of 99mm by 99mm. Mounting holes are 3.5mm in diameter, with centers 3.75mm from the edges.
@@ -28,6 +28,7 @@ There are jumpers for:
 
 ## TMC2130 in SPI mode
 
+- Untested: Hardware option for this is available on the board, but software support has not been tested successfully yet.
 - Set the motor jumpers to SPI instead of MS1/MS2/MS3, and to TMC instead of RST.
 - Connect the respective "CS_PIN" (X, Y, Z, E) to the pin you want to use for CS of that motor. You will need to use a female-to-female jumper cable. Currently, unused pins are SDA, SCL, and IO0, which allows for up to three TMC2130 drivers to be used in SPI mode.
 
