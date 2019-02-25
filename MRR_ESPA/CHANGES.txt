@@ -8,6 +8,7 @@ v0.9
 - Remove 5V select circuit; switched to using 1N5819 diodes to prevent reverse voltage.
 - Amended several capacitors which were mistakenly connected in series instead of in parallel. Specifically, C11 and C12 in v0.8.
 - Amended DTR/RTS circuit; previously, IO0 connected to wrong side of S9014, which prevented flashing of firmware via USB.
+- Fixed microSD card connections (MISO and MOSI were connected in reverse).
 
 v0.8
 ----
