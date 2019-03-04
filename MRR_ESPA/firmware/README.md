@@ -82,4 +82,3 @@ The following lines need to be added in order for microSD card to work.<br>
 #define SCK_PIN            18
 #define SS_PIN              5
 #define SDSS                5`
-
