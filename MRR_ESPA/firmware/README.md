@@ -14,6 +14,8 @@ Default general user name and password:<br>
 User: user<br>
 Password: user<br>
 
+Default mDNS name: **marlinesp**, which can be accessed on web browsers by going to `http://marlinesp.local/`
+
 For more about the web UI, see Luc's [ESP3D-WEBUI](https://github.com/luc-github/ESP3D-WEBUI) repository.
 
 # Instructions for flashing firmware
