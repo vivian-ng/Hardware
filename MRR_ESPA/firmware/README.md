@@ -76,4 +76,10 @@ In `Configuration_adv.h`:
 To be completed.<br>
 
 In `Marlin\src\pins\pins_ESP32.h`:
-To be completed.<br>
+The following lines need to be added in order for microSD card to work.<br>
+`#define MOSI_PIN           23
+#define MISO_PIN           19
+#define SCK_PIN            18
+#define SS_PIN              5
+#define SDSS                5`
+
