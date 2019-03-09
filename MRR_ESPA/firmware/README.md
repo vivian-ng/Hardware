@@ -86,3 +86,13 @@ The following lines need to be added in order for microSD card to work.<br>
 #define SS_PIN              5
 #define SDSS                5
 ```
+
+# Macros
+
+The webUI (based on ESP3D) allows user-defined macros to be created. This allows "buttons" for custom commands (GCODE), such as buttons for babystepping.<br>
+For example, to add a command to move to babystep Z by 0.01 downwards:
+1. Create a text file with the gcode. In this case the gcode would be "M290 Z-0.01". Save it with a ".g" extension. In this case, it can be named babyzdn.g.
+2. Upload that file to the ESP3D File System (Not to the SD card); this is the SPIFFS file system, where index.html.gz is stored.
+3. Click on the macro editor button in the controls panel. click the plus icon to add a macro. Give it a name, select a color, set the target as ESP and enter the path to the gcode file you uploaded.
+4. Click Save
+(Example based on [GRBL_ESP32 wiki](https://github.com/bdring/Grbl_Esp32/wiki/ESP3D-Web-UI-for-Grbl_ESP32); GRBL_ESP32 is a fork of GRBL with luc-github's ESP3D webUI.)<br>
