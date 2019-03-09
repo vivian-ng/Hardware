@@ -67,6 +67,12 @@ This will start up WiFi in AP mode, using the settings set by `M589`.
 
 To be completed.
 
+# Uploading webUI
+
+When you first go to the webUI address (if you have mDNS, this should be http://marlinesp.local/ by default), you will be asked to upload the webUI files. Click on "Choose files", select `index.html.gz`, then upload. Then, refresh your browser page; the webUI should load. A copy of `index.html.gz` can be found in the firmware directory, under `<firmware directory>/Marlin/data/`.<br>
+
+If you have the [Arduino ESP32 filesystem uploader](https://github.com/me-no-dev/arduino-esp32fs-plugin), you can also choose to upload the required files from Arduino IDE. After flashing the firmware, go to `Tools`, then choose `ESP32 Sketch Data Upload`.
+
 # Common settings which need to be changed in Marlin
 
 The following are some common settings which need to be changed in Marlin to configure the firmware for your specific printer.<br>
@@ -90,9 +96,10 @@ The following lines need to be added in order for microSD card to work.<br>
 # Macros
 
 The webUI (based on ESP3D) allows user-defined macros to be created. This allows "buttons" for custom commands (GCODE), such as buttons for babystepping.<br>
+
 For example, to add a command to move to babystep Z by 0.01 downwards:
-1. Create a text file with the gcode. In this case the gcode would be "M290 Z-0.01". Save it with a ".g" extension. In this case, it can be named babyzdn.g.
-2. Upload that file to the ESP3D File System (Not to the SD card); this is the SPIFFS file system, where index.html.gz is stored.
+1. Create a text file with the gcode. In this case the gcode would be "M290 Z-0.01". Save it with a ".g" extension. In this case, it can be named `babyzdn.g`.
+2. Upload that file to the ESP3D File System (Not to the SD card); this is the SPIFFS file system, where `index.html.gz` is stored.
 3. Click on the macro editor button in the controls panel. click the plus icon to add a macro. Give it a name, select a color, set the target as ESP and enter the path to the gcode file you uploaded.
 4. Click Save
 (Example based on [GRBL_ESP32 wiki](https://github.com/bdring/Grbl_Esp32/wiki/ESP3D-Web-UI-for-Grbl_ESP32); GRBL_ESP32 is a fork of GRBL with luc-github's ESP3D webUI.)<br>
