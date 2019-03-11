@@ -4,7 +4,7 @@
 This is a bare-minimum 3D printer control board based on the ESP32 microcontroller, which comes with built-in WiFi and BlueTooth.
 
 **Work in progress! Do not attempt production using this schematic!**<br>
-**Current version: v0.8**<br>
+**Current version: v0.9**<br>
 Note: As of v0.8, files have been migrated to KiCad so that the files can be more accessible to everyone who wishes to modify them.<br>
 
 Features:
@@ -13,7 +13,7 @@ Features:
 - Separate power supply for the heat bed
 - X, Y, and Z min endstops
 - Allows the use of a Z-axis probe, such as an inductive sensor, running on the input supply voltage (12V to 24V)
-- AUX1 connector for use with an external host, such as the closed-source MKS TFT32
+- AUX1 connector for use with an external host, such as the closed-source MKS TFT32 (**Untested!!**)
 - Supports TMC2130 drivers in SPI mode which can be enabled by configuring jumpers (**Untested!!!** Hardware option is available, pending software support in Marlin.)
   - Set MS1, MS2, MS3 jumpers to SPI, RST jumper to TMC, and TMC_SEL jumper to SPI to enable TMC2130 SPI mode
   - For TMC2130 SPI mode, connect corresponding motor (X, Y, Z, or E0) on CS_PIN header to available ESP32 pin
@@ -59,7 +59,6 @@ Released under CERN Open Hardware Licence v1.2. See LICENSE.txt for details.
 - Do not reverse polarity.
 - The breakout and endstop pins are rated for 3.3V, which is the voltage the ESP32 operates at. Attempting to feed inputs above 3.3V to these pins may damage the board.
 - It is recommended to power the board only via USB (i.e. turn off PSU power supply) when flashing the board.
-- Use the same PSU to power both VIN and VBED; the GND rail on the board is common to board VIN and VBED, and using different PSUs for these power inputs (with different ground levels) may have dangerous effects. (This will change in v0.9 where an optocoupler will be used to drive the bed MOSFET, and VBED and its corresponding GND will be on a separate rail altogether.)
 
 ## Disclaimer
 
