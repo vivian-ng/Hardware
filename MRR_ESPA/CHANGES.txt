@@ -1,5 +1,10 @@
 Changes
 -------
+v1.0
+----
+- Changed via diameter for VBED line to match the track width; the diameter used in previous versions was too small, causing excessive heat buildup and burning the PCB.
+- Exposed underside of PCB for MOSFETs and VBED terminals for better heat dissipation.
+
 v0.9
 ----
 - TLP182 (SMD-4) optocoupler and voltage divider to drive bed MOSFET so that a separate PSU can be used, referencing Little-Driver (https://github.com/Digital-Sqrt/Little-Driver).
