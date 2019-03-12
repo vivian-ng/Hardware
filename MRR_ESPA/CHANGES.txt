@@ -2,8 +2,9 @@ Changes
 -------
 v1.0
 ----
-- Changed via diameter for VBED line to match the track width; the diameter used in previous versions was too small, causing excessive heat buildup and burning the PCB.
+- Widened trace width of high current bearing lines, like those used for the heatbed and hotend. Changed via diameter for VBED line to match the track width; the diameter used in previous versions was too small, causing excessive heat buildup and burning the PCB.
 - Exposed underside of PCB for MOSFETs and VBED terminals for better heat dissipation.
+- Removed TXS0102 level shifter; used a simple voltage divider on RX pin, while TX pin is left as it is.
 
 v0.9
 ----
