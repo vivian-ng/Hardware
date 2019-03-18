@@ -5,8 +5,7 @@ v1.0
 - Widened trace width of high current bearing lines, like those used for the heatbed and hotend. Changed via diameter for VBED line to match the track width; the diameter used in previous versions was too small, causing excessive heat buildup and burning the PCB.
 - Exposed underside of PCB for MOSFETs and VBED terminals for better heat dissipation.
 - Removed TXS0102 level shifter; used a simple voltage divider on RX pin, while TX pin is left as it is.
-- Amended jumpers for stepper drivers; changed to connect to either VIO, GND, or unconnected.
-- Removed CS_PIN headers, unrouted SPI nets (MOSI, MISO, SCK) from stepper drivers.
+- Amended jumpers for stepper drivers; changed to connect to either VIO, GND, or unconnected. Removed CS_PIN headers, unrouted SPI nets (MOSI, MISO, SCK) from stepper drivers. TMC2130 drivers can be connected in standalone (non-SPI) mode by removing all the jumpers under the driver. For TMC2208 drivers, MS1 and MS2 can be connected to GND or VIO to set microstepping in standalone mode; remove MS3 and RST jumpers. TMC2130 drivers with their SPI pins exposed on top can be connected to the board's SPI pins (for CS, use one of the unused ESP32 pins such as SDA, SCL, or IO0).
 
 v0.9
 ----
