@@ -2,7 +2,7 @@ Changes
 -------
 v1.01
 -----
-- Changed IRLS3034 to IRLR8743 using a footprint with better thermal vias.
+- Changed F2 to use a bigger (Littelfuse 0456 series) 30A fuse.
 
 v1.0
 ----
