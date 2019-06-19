@@ -2,7 +2,7 @@ Changes
 -------
 v1.01
 -----
-- Changed F2 to use a bigger (Littelfuse 0456 series) 30A fuse.
+- Widened VBED-related trace widths to solve issues with high temperatures when heating. 
 
 v1.0
 ----
