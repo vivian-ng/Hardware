@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/teck/OneDrive/Workspace/kicadproj/MRR_ESPA/MRR_ESPA.sch</source>
-    <date>Fri 05 Apr 2019 07:38:37 PM JST</date>
+    <source>/home/teck/github/MRR_Hardware/MRR_ESPA/current/MRR_ESPA.sch</source>
+    <date>Sun 09 Jun 2019 04:49:36 PM JST</date>
     <tool>Eeschema 5.0.2-bee76a0~70~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>MRR ESPA</title>
         <company/>
-        <rev>v1.0</rev>
-        <date>2019-03-17</date>
+        <rev>v1.01</rev>
+        <date>2019-06-05</date>
         <source>MRR_ESPA.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -1744,7 +1744,7 @@
       <uri>/usr/share/kicad/library/Jumper.lib</uri>
     </library>
     <library logical="MRR_ESPA-rescue">
-      <uri>/home/teck/OneDrive/Workspace/kicadproj/MRR_ESPA/MRR_ESPA-rescue.lib</uri>
+      <uri>/home/teck/github/MRR_Hardware/MRR_ESPA/current/MRR_ESPA-rescue.lib</uri>
     </library>
     <library logical="Mechanical">
       <uri>/usr/share/kicad/library/Mechanical.lib</uri>
