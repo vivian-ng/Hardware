@@ -2,7 +2,7 @@ Changes
 -------
 v1.01
 -----
-- Changed IRLS3034 to IRLR8743 using a footprint with better thermal vias.
+- Widened VBED-related trace widths to solve issues with high temperatures when heating. 
 
 v1.0
 ----
